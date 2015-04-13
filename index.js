@@ -15,8 +15,13 @@ module.exports = function (app) {
       // Don't accept components without a view specified
       if(!component.prototype.view) throw new Error('Components must have views specified when in routes!');
 
-      // Register component
-      this.component(viewName, component, ns);
+      // Register component, if it's not already been added or we're forcing it
+      if(_.indexOf(components, component) < 0 || options.force) {
+        this.component(viewName, component, ns);
+
+        // Add component to component list to avoid adding it twice
+        components.push(component);
+      }
 
       app['_' + method].call(this, pattern, function (page, model, params, next) {
         var viewName = viewName || component.prototype.name;
