@@ -1,0 +1,27 @@
+{
+  "name": "d-load",
+  "version": "1.0.0",
+  "description": "Derby plugin for direct route component matching, using component's load fn to do route tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "lodash": "*"
+  },
+  "author": "cjblomqvist <carl@cjblomqvist.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BBWeb/d-load.git"
+  },
+  "keywords": [
+    "derby",
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/BBWeb/d-load/issues"
+  },
+  "homepage": "https://github.com/BBWeb/d-load",
+  "readmeFilename": "README.md"
+}
