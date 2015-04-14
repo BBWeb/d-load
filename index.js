@@ -1,5 +1,7 @@
 var _ = require('lodash');
 
+var collections = [];
+
 module.exports = function (app) {
   ['get', 'post', 'put', 'del', 'enter', 'exit'].forEach(function (method) {
     app['_' + method] = app[method];
