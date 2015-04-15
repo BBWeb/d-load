@@ -1,6 +1,6 @@
 {
   "name": "d-load",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Derby plugin for direct route component matching, using component's load fn to do route tasks",
   "main": "index.js",
   "scripts": {
