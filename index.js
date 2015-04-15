@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-var collections = [];
+var components = [];
 
 module.exports = function (app) {
   ['get', 'post', 'put', 'del', 'enter', 'exit'].forEach(function (method) {
