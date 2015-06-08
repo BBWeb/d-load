@@ -29,7 +29,7 @@ module.exports = function (app) {
         var viewName = viewName || component.prototype.name;
 
         // No load fn existed, let's just render
-        if(!component.prototype.load) return page.render(viewName);
+        if(!component.prototype[method]) return page.render(viewName);
 
         // Overwrite page in order to be able to overwrite the render fn to 
         var _page = _.clone(page);
@@ -40,7 +40,7 @@ module.exports = function (app) {
           page.render(ns);
         };
 
-        component.prototype.load.call(this, _page, model, params, next);
+        component.prototype[method].call(this, _page, model, params, next);
       });
     }
   });
